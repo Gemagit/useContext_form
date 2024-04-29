@@ -1,8 +1,29 @@
 import React from "react";
-import Formulario from "./Form/Form"
+import { useState } from 'react'
+import Formulario from './Form'
+import Card from './Card'
 
 const MainComponent = () => {
-  return <div>MainComponent</div>;
+  const [user, setUser] = useState({
+    name: "",
+    email: "",
+    url_img: "",
+    age: ""
+  });
+
+  return (
+    <section>
+      <h1>Main</h1>
+      <Formulario setUser={setUser} />
+      <Card
+        props={user}
+      /* name={user.name}
+      email={user.email}
+      url_img={user.url_foto}
+      age={user.age} */
+      />
+    </section>
+  );
 };
 
 export default MainComponent;

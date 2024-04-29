@@ -1,14 +1,16 @@
 import React from 'react';
 
-const Card = () => {
+const Card = ({props}, invent) => {
+
   return (
     <article>
-      <p>Nombre: </p>
-      <p>Email: </p>
-      <p>Url foto: </p>
-      <p>Edad: </p>
+      <p>Name: {props.name} </p>
+      <p>Email: {props.email}</p>
+      <p>Url img:{props.img_url} </p>
+      <p>Age: {props.age}</p>
     </article>
+
   );
 };
 
-export default Card;
+export default Card; 
