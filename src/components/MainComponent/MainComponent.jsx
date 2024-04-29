@@ -13,7 +13,6 @@ const MainComponent = () => {
 
   return (
     <section>
-      <h1>Main</h1>
       <Formulario setUser={setUser} />
       <Card
         props={user}

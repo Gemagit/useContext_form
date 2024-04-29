@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Card = ({props}, invent) => {
+const Card = ({props}) => {
 
   return (
     <article>
