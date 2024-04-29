@@ -2,35 +2,37 @@ import React from "react";
 import { useState } from "react";
 
 
-function Formulario() {
+function Formulario({ setUser}) {
   
-    const [nombre, setNombre] = useState('');
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    const [urlFoto, setUrlFoto] = useState('');
-    const [edad, setEdad] = useState('');
+    const [url_img, setUrlImg] = useState('');
+    const [age, setAge] = useState('');
   
     const handleSubmit = (e) => {
       e.preventDefault();
-      console.log("Nombre:", nombre);
+     /*  console.log("Name:", name);
       console.log("Email:", email);
-      console.log("URL de la foto:", urlFoto);
-      console.log("Edad:", edad);
+      console.log("url_img:", url_img);
+      console.log("Age:", age); */
+
+      setUser({name,email,url_img,age});
     };
   
-    const handleChangeNombre = (e) => {
-      setNombre(e.target.value);
+    const handleChangeName = (e) => {
+      setName(e.target.value);
     };
   
     const handleChangeEmail = (e) => {
       setEmail(e.target.value);
     };
   
-    const handleChangeUrlFoto = (e) => {
-      setUrlFoto(e.target.value);
+    const handleChangeUrlImg = (e) => {
+      setUrlImg(e.target.value);
     };
   
-    const handleChangeEdad = (e) => {
-      setEdad(e.target.value);
+    const handleChangeAge = (e) => {
+      setAge(e.target.value);
     };
 
 
@@ -38,9 +40,9 @@ function Formulario() {
     <form onSubmit={handleSubmit}>
       <input
         type="text"
-        value={nombre}
-        onChange={handleChangeNombre}
-        placeholder="Nombre"
+        value={name}
+        onChange={handleChangeName}
+        placeholder="Name"
       />
       <br />
       <input
@@ -52,16 +54,16 @@ function Formulario() {
       <br />
       <input
         type="text"
-        value={urlFoto}
-        onChange={handleChangeUrlFoto}
-        placeholder="URL de la foto"
+        value={url_img}
+        onChange={handleChangeUrlImg}
+        placeholder="URL img"
       />
       <br />
       <input
         type="number"
-        value={edad}
-        onChange={handleChangeEdad}
-        placeholder="Edad"
+        value={age}
+        onChange={handleChangeAge}
+        placeholder="Age"
       />
       <br />
       <button type="submit">Enviar</button>
