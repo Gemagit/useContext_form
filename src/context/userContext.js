@@ -1,4 +1,9 @@
-import {createContext} from 'react';
+import {createContext, useContext} from 'react';
 
 // Crear el contexto
-export const UserContext = createContext();
+const UserContext = createContext();
+
+// Función personalizada hook para utilizar el contexto del usuario
+const useUserContext = () => useContext(UserContext);
+
+export { UserContext, useUserContext };

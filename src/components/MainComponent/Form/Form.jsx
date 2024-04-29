@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 
-function Formulario({ setUser}) {
+function Formulario({ setUser,updateUserEmail}) {
   
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -17,6 +17,7 @@ function Formulario({ setUser}) {
       console.log("Age:", age); */
 
       setUser({name,email,url_img,age});
+      updateUserEmail(email);
     };
   
     const handleChangeName = (e) => {
