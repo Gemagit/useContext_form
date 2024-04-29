@@ -1,0 +1,9 @@
+ÁRBOL DE COMPONENTES DE MI APP (sujeto a cambios)
+App--App.jsx
+    --Head
+    --Formulario(4 inputs)
+        Nombre
+        Email
+        URL foto
+        Edad
+    --Card (almacena los datos del formulario)
