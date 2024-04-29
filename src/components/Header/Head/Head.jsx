@@ -17,7 +17,7 @@ const Head = () => {
     {/* Renderizar el contenido del componente */}
     {/* Por ejemplo, puedes renderizar el correo electrónico en la cabeza de la página */}
     <header>
-      <p>User Email: {email}</p>
+      <p className="usermail">User Email: {email}</p>
     </header>
   </UserContext.Provider>
 );
